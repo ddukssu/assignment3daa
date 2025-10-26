@@ -1,0 +1,48 @@
+{
+  "graphs": [
+    {
+      "id": 3,
+      "nodes": ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"],
+      "edges": [
+        {"from": "A", "to": "B", "weight": 10},
+        {"from": "A", "to": "C", "weight": 6},
+        {"from": "B", "to": "D", "weight": 5},
+        {"from": "C", "to": "D", "weight": 15},
+        {"from": "C", "to": "E", "weight": 4},
+        {"from": "D", "to": "F", "weight": 9},
+        {"from": "E", "to": "F", "weight": 11},
+        {"from": "E", "to": "G", "weight": 8},
+        {"from": "F", "to": "H", "weight": 7},
+        {"from": "G", "to": "H", "weight": 12},
+        {"from": "G", "to": "I", "weight": 2},
+        {"from": "H", "to": "J", "weight": 3},
+        {"from": "I", "to": "J", "weight": 14},
+        {"from": "I", "to": "K", "weight": 1},
+        {"from": "J", "to": "L", "weight": 13},
+        {"from": "K", "to": "L", "weight": 5},
+        {"from": "K", "to": "M", "weight": 6},
+        {"from": "L", "to": "N", "weight": 4},
+        {"from": "M", "to": "N", "weight": 8},
+        {"from": "M", "to": "O", "weight": 9},
+        {"from": "N", "to": "P", "weight": 10},
+        {"from": "O", "to": "P", "weight": 11},
+        {"from": "O", "to": "Q", "weight": 7},
+        {"from": "P", "to": "R", "weight": 2},
+        {"from": "Q", "to": "R", "weight": 3},
+        {"from": "Q", "to": "S", "weight": 12},
+        {"from": "R", "to": "T", "weight": 14},
+        {"from": "S", "to": "T", "weight": 1},
+        {"from": "S", "to": "U", "weight": 13},
+        {"from": "T", "to": "V", "weight": 5},
+        {"from": "U", "to": "V", "weight": 6},
+        {"from": "U", "to": "W", "weight": 4},
+        {"from": "V", "to": "X", "weight": 8},
+        {"from": "W", "to": "X", "weight": 9},
+        {"from": "W", "to": "Y", "weight": 10},
+        {"from": "X", "to": "Z", "weight": 11},
+        {"from": "Y", "to": "Z", "weight": 7},
+        {"from": "A", "to": "Z", "weight": 20}
+      ]
+    }
+  ]
+}

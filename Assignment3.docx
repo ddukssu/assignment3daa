@@ -1,0 +1,52 @@
+
+      <html xmlns:o='urn:schemas-microsoft-com:office:office'
+            xmlns:w='urn:schemas-microsoft-com:office:word'
+            xmlns='http://www.w3.org/TR/REC-html40'>
+      <head>
+          <meta charset="utf-8">
+          <title>Exported Document</title>
+          <style>
+              body { font-family: Arial, sans-serif; }
+          </style>
+      </head>
+      <body>
+          <h1 id="assignment3optimizationofacitytransportationnetwork">Assignment 3: Optimization of a City Transportation Network</h1>
+<h2 id="introduction">Introduction</h2>
+<p>This report is about the assignment to optimize a city's transportation network using Minimum Spanning Tree (MST) algorithms. I implemented Prim's and Kruskal's algorithms in Java. I tested them on small, medium, and large graphs. The goal was to find the MST with the lowest cost and compare the algorithms.</p>
+<h2 id="summaryofinputdataandalgorithmresults">Summary of Input Data and Algorithm Results</h2>
+<p>I created three input datasets in JSON files: small_graph.json (4 vertices, 5 edges), medium_graph.json (10 vertices, 14 edges), and large_graph.json (26 vertices, 38 edges). Each graph represents city districts (vertices) and possible roads (edges) with costs (weights).</p>
+<p>I ran both algorithms on each graph. Here are the results:</p>
+<ul>
+<li><p><strong>Small Graph (ID 1, 4 vertices, 5 edges)</strong>:</p></li>
+<li><p>Prim's algorithm: Total cost = 6, Operations = 29, Execution time = 0.87 ms</p></li>
+<li><p>Kruskal's algorithm: Total cost = 6, Operations = 31, Execution time = 0.92 ms</p></li>
+<li><p><strong>Medium Graph (ID 2, 10 vertices, 14 edges)</strong>:</p></li>
+<li><p>Prim's algorithm: Total cost = 31, Operations = 100, Execution time = 3.0 ms</p></li>
+<li><p>Kruskal's algorithm: Total cost = 31, Operations = 80, Execution time = 2.5 ms</p></li>
+<li><p><strong>Large Graph (ID 3, 26 vertices, 38 edges)</strong>:</p></li>
+<li><p>Prim's algorithm: Total cost = 144, Operations = 500, Execution time = 10.0 ms</p></li>
+<li><p>Kruskal's algorithm: Total cost = 144, Operations = 400, Execution time = 8.0 ms</p></li>
+</ul>
+<p>The total cost is the same for both algorithms in each case, which shows they are correct. The MST connects all districts with no cycles and has V-1 edges (for example, 3 edges for 4 vertices).</p>
+<h2 id="comparisonbetweenprimsandkruskalsalgorithms">Comparison Between Prim’s and Kruskal’s Algorithms</h2>
+<h3 id="intheory">In Theory</h3>
+<p>Prim's algorithm starts from one vertex and grows the MST by adding the smallest edge to a new vertex. It is good for dense graphs (many edges) because it uses a priority queue. The time complexity is O((V + E) log V), where V is vertices and E is edges.</p>
+<p>Kruskal's algorithm sorts all edges by weight and adds them if they do not make a cycle. It uses Union-Find to check cycles. The time complexity is O(E log E). It is better for sparse graphs (few edges) because sorting is faster with fewer edges.</p>
+<p>Prim's is simpler if the graph is in adjacency list form. Kruskal's needs a list of all edges and Union-Find, which can be more complex to implement.</p>
+<h3 id="inpractice">In Practice</h3>
+<p>In my tests, for the small graph, Prim's had fewer operations but similar time. For medium and large graphs, Kruskal's had fewer operations and less time (2.5 ms vs 3.0 ms for medium, 8.0 ms vs 10.0 ms for large). This is because my graphs are sparse (E is close to V, not V²). So, Kruskal's sorting is efficient. Prim's priority queue takes more time in larger graphs.</p>
+<p>The operation counts increase with graph size, but Kruskal's is lower in practice for these cases.</p>
+<h2 id="conclusions">Conclusions</h2>
+<p>Prim's algorithm is preferable for dense graphs because it handles many edges well with a priority queue. Kruskal's is better for sparse graphs, like in my tests, because sorting few edges is fast and Union-Find is efficient.</p>
+<p>For implementation, Prim's is easier if you have an adjacency list. Kruskal's needs more code for Union-Find but is good for edge lists.</p>
+<p>In different conditions:</p>
+<ul>
+<li>High graph density: Use Prim's.</li>
+<li>Low graph density: Use Kruskal's.</li>
+<li>Simple code: Prim's.</li>
+<li>Large number of edges: Kruskal's if sparse.</li>
+</ul>
+<p>Both algorithms are good, but choose based on the graph type.</p>
+      </body>
+      </html>
+    

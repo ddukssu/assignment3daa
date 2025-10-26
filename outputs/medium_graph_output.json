@@ -1,0 +1,43 @@
+{
+  "results": [
+    {
+      "graph_id": 2,
+      "input_stats": {
+        "vertices": 10,
+        "edges": 14
+      },
+      "prim": {
+        "mst_edges": [
+          {"from": "D", "to": "F", "weight": 1},
+          {"from": "B", "to": "C", "weight": 2},
+          {"from": "F", "to": "G", "weight": 2},
+          {"from": "A", "to": "C", "weight": 3},
+          {"from": "I", "to": "J", "weight": 3},
+          {"from": "G", "to": "H", "weight": 4},
+          {"from": "B", "to": "D", "weight": 5},
+          {"from": "H", "to": "I", "weight": 5},
+          {"from": "D", "to": "E", "weight": 6}
+        ],
+        "total_cost": 31,
+        "operations_count": 100,
+        "execution_time_ms": 3.0
+      },
+      "kruskal": {
+        "mst_edges": [
+          {"from": "D", "to": "F", "weight": 1},
+          {"from": "B", "to": "C", "weight": 2},
+          {"from": "F", "to": "G", "weight": 2},
+          {"from": "A", "to": "C", "weight": 3},
+          {"from": "I", "to": "J", "weight": 3},
+          {"from": "G", "to": "H", "weight": 4},
+          {"from": "B", "to": "D", "weight": 5},
+          {"from": "H", "to": "I", "weight": 5},
+          {"from": "D", "to": "E", "weight": 6}
+        ],
+        "total_cost": 31,
+        "operations_count": 80,
+        "execution_time_ms": 2.5
+      }
+    }
+  ]
+}
